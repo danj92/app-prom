@@ -17,6 +17,8 @@ export class LandingPageComponent {
 
   lists: any; // TODO ref interface
 
+  id: number;
+
   @ViewChild('searchInput')
   input: ElementRef;
 
@@ -67,12 +69,18 @@ export class LandingPageComponent {
   }
 
   // fix any
-  select(event: any) {
+  select(event: any, list: any) {
     this.lists = [];
     this.renderer.setProperty(
       this.input?.nativeElement,
       'value',
       event.srcElement.innerText
     );
+
+    this.id = list.url.match(/\d+/)[0];
+
+    console.log(this.id);
+
+    this.router.navigate([`${this.id}`]);
   }
 }
