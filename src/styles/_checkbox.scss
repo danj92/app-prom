@@ -1,0 +1,36 @@
+.label-checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  span {
+    margin-left: 10px;
+  }
+  .checkbox {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    border: 1px solid var(--content-dark);
+    -webkit-appearance: none;
+    cursor: pointer;
+    outline: none;
+    &:focus {
+      border: 1px solid var(--primary);
+    }
+    &:checked {
+      position: relative;
+      background: var(--primary);
+      &:after {
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        content: '';
+        width: 9px;
+        height: 4px;
+        border: 2px solid var(--content-very-light);
+        border-right: none;
+        border-top: none;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}

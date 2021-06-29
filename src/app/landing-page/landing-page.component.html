@@ -1,0 +1,17 @@
+<div class="wrapper">
+  <div class="control">
+    <input type="text" #searchInput class="input" />
+    <!-- <app-custom-input> Bind form control</app-custom-input> -->
+  </div>
+  <app-spinner *ngIf="isLoading"></app-spinner>
+
+  <div *ngIf="!isLoading && lists?.length === 0">No results</div>
+
+  <ng-container *ngIf="lists?.length !== 0 && !isLoading">
+    <div *ngFor="let list of lists" class="list is-hoverable">
+      <a href="{{ list.url }}" class="list-item" (click)="select($event)">
+        {{ list.name }}
+      </a>
+    </div>
+  </ng-container>
+</div>

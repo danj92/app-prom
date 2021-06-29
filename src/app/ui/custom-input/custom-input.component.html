@@ -1,0 +1,10 @@
+<label>
+  <span><ng-content></ng-content></span>
+  <input
+    #input
+    type="text"
+    [placeholder]="placeholder ? placeholder : ''"
+    (blur)="onBlur()"
+    (input)="onInputChange()"
+  />
+</label>

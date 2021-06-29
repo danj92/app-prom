@@ -1,1 +1,41 @@
-/* You can add global styles to this file, and also import other style files */
+@import "styles/input";
+@import "styles/checkbox";
+@import "styles/button";
+
+:root {
+  --form-element: 35px;
+
+  --font-family: "Lato", sans-serif;
+  --font-color-very-light: #9fadb5;
+  --font-color-light: #9fadb5;
+  --font-color: #000000;
+
+  --content-very-light: #ffffff;
+  --content-light: #f7f7f7;
+  --content: #a8a8a7;
+  --content-dark: #7c7c7b;
+
+  --primary-light: #3579cf;
+  --primary: #154a8d;
+  --primary-dark: #05336d;
+
+  --secondary-light: #56d48f;
+  --secondary: #36b56f;
+  --secondary-dark: #128043;
+
+  --warning-light: #ff993e;
+  --warning: #f47521;
+  --warning-dark: #d25603;
+
+  --danger-light: #ff4208;
+  --danger: #ed1c24;
+  --danger-dark: #b40007;
+
+  --divider-color: #dadfe4;
+  --shadow: #00000029;
+  --box-shadow: 0 3px 6px var(--shadow);
+
+  // scroll color
+  --scroll-track: #ededed;
+  --scroll-thumb: #bcbcbc;
+}

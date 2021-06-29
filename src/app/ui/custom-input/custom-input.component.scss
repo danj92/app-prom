@@ -1,0 +1,52 @@
+:host {
+  display: block;
+  margin-bottom: var(--input-bottom-space);
+  width: 100%;
+  label {
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+    span {
+      padding-bottom: 10px;
+    }
+    input {
+      height: 30px;
+      padding: 0 10px;
+      outline: none;
+      border-width: 1px;
+      border-color: var(--input-border-color);
+      border-style: solid;
+      color: var(--input-text);
+      &[disabled] {
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  &.required {
+    span {
+      color: var(--content-very-dark);
+      &:after {
+        color: var(--danger);
+        content: '*';
+        margin-left: 5px;
+      }
+    }
+  }
+
+  &.ng-touched.ng-invalid {
+    label {
+      color: var(--danger);
+    }
+    input {
+      border-width: 1px;
+      border-color: var(--danger);
+    }
+  }
+
+  &.ignore-error-blink {
+    .blink {
+      animation: none;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+:host {
+  --spinner-size: 40px;
+  &:not(.is-visible) {
+    display: none;
+  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @keyframes rotator {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  &.spinner-small {
+    --spinner-size: 27px;
+  }
+  &.spinner-big {
+    --spinner-size: 80px;
+  }
+  svg {
+    width: var(--spinner-size);
+    height: var(--spinner-size);
+    fill: var(--primary);
+    animation: rotator 0.6s linear infinite;
+  }
+}
